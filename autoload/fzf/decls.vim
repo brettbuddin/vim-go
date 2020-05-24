@@ -130,20 +130,9 @@ function! s:source(mode,...) abort
 endfunc
 
 function! fzf#decls#cmd(...) abort
-  let normal_fg = s:code("Normal", "fg")
-  let normal_bg = s:code("Normal", "bg")
-  let cursor_fg = s:code("CursorLine", "fg")
-  let cursor_bg = s:code("CursorLine", "bg")
-  let colors = printf(" --color %s%s%s%s%s",
-        \ &background,
-        \ empty(normal_fg) ? "" : (",fg:".normal_fg),
-        \ empty(normal_bg) ? "" : (",bg:".normal_bg),
-        \ empty(cursor_fg) ? "" : (",fg+:".cursor_fg),
-        \ empty(cursor_bg) ? "" : (",bg+:".cursor_bg),
-        \)
   call fzf#run(fzf#wrap('GoDecls', {
         \ 'source': call('<sid>source', a:000),
-        \ 'options': printf('-n 1 --with-nth 1,2 --delimiter=$''\t'' --preview "echo {3}" --ansi --prompt "GoDecls> " --expect=ctrl-t,ctrl-v,ctrl-x%s', colors),
+        \ 'options': '-n 1 --ansi --prompt "GoDecls> " --expect=ctrl-t,ctrl-v,ctrl-x',
         \ 'sink*': function('s:sink')
         \ }))
 endfunction
