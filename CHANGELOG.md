@@ -18,6 +18,7 @@ IMPROVEMENTS:
   [[GH-3028]](https://github.com/fatih/vim-go/pull/3028)
 * Add support for using static check as the gometalinter.
   [[GH-3036]](https://github.com/fatih/vim-go/pull/3036)
+  [[GH-3133]](https://github.com/fatih/vim-go/pull/3133)
 * Add `g:go_debug_mappings` to allow the debug key mappings to be customized.
   [[GH-3035]](https://github.com/fatih/vim-go/pull/3035)
 * Use `gopls` as the default instead of `guru` to satisfy `:GoImplements`.
@@ -71,6 +72,9 @@ BUG FIXES:
   [[GH-3094]](https://github.com/fatih/vim-go/pull/3094)
 * Handle additional ways that gopls can provide links for godoc.
   [[GH-3112]](https://github.com/fatih/vim-go/pull/3112)
+* Remove implication that `g:go_def_reuse_buffer` only applies to split variant
+  of jumping to a definition.
+  [[GH-3128]](https://github.com/fatih/vim-go/pull/3128)
 
 ## v1.24 - (September 15, 2020)
 
