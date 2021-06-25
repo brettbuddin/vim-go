@@ -10,11 +10,24 @@ IMPROVEMENTS:
   [[GH-3220]](https://github.com/fatih/vim-go/pull/3220)
 * Use `go env GOBIN` to determine `GOBIN`'s value.
   [[GH-3207]](https://github.com/fatih/vim-go/pull/3207)
+* List register in the debugger.
+  [[GH-3221]](https://github.com/fatih/vim-go/pull/3221)
+* Install the latest release of tools that seem to be using tags to do releases
+  instead of installing from their master/main branch.
+  [[GH-3227]](https://github.com/fatih/vim-go/pull/3227)
+* Expose error message when `gopls` cannot be found and
+  `g:go_echo_command_info` is set.
+  [[GH-3244]](https://github.com/fatih/vim-go/pull/3244)
+* Install all tools in module aware mode in preparation for Go 1.17 release.
+  [[GH-3226]](https://github.com/fatih/vim-go/pull/3226)
 
 BUG FIXES:
 * Handle terminating parenthesis on hexadecimal values.
   [[GH-3216]](https://github.com/fatih/vim-go/pull/3216)
-
+* Fix applying text edits from gopls.
+  [[GH-3231]](https://github.com/fatih/vim-go/pull/3231)
+* Apply arguments to `:GoCoverageBrowser`.
+  [[GH-4031]](https://github.com/fatih/vim-go/pull/4031)
 
 ## v1.25 - (April 18, 2021)
 
